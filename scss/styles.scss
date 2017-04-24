@@ -755,10 +755,15 @@ footer {
     height:300px;
     float: left;
     overflow: hidden;
+    vertical-align: middle;
 
     img {
         position: relative;
+        vertical-align: middle;
+        top: 50%;
+        transform: translateY(-50%);
         width: 100%;
+        // height: 100%;
     }
 }
 
