@@ -253,7 +253,7 @@ var TxtType = function(el, toRotate, period) {
 
     window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
-        elements[0].setAttribute('data-type', '[ "Hi, I\'m Ha Min.", "I love to develop.", "I love to innovate.", "I love to think.", "I love design.", "I love challenges.", "I am creative.", "I am intelligent.", "Welcome!"  ]')
+        elements[0].setAttribute('data-type', '[ "Hi, I\'m Ha Min.", "I love to develop.", "I love to innovate.", "I love to think.", "I love design.", "I love challenges.", "Welcome!"  ]')
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
