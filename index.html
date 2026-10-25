@@ -1,437 +1,104 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Hi there! I'm Ha Min Ko, a software engineer and business student at Babson college. I love tech, developing, innovating, and learning. Feel free to take a look at some of my works here!">
-    <meta name="keywords" content="Ha Min Ko, Website, Portfolio, Personal">
-    <meta name="author" content="Ha Min Ko">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ha Min Ko | Software Engineer, Tech Enthusiast, Developer, Scholar</title>
-	  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	  <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ha Min Ko</title>
+  <meta name="description" content="Ha Min Ko: personal projects and links.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --fg: #1d1c1a;
+      --muted: #6b675f;
+      --line: #dedad1;
+      --card: #ffffff;
+      --accent: #2f6b4f;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151614;
+        --fg: #ecebe6;
+        --muted: #9d9a92;
+        --line: #2c2e2a;
+        --card: #1c1e1b;
+        --accent: #7fbf9c;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 1.0625rem/1.6 "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 10vh, 6rem) 1.25rem 3rem;
+    }
+    h1 {
+      font: 600 clamp(2.4rem, 7vw, 3.25rem)/1.1 "Fraunces", Georgia, serif;
+      letter-spacing: -0.01em;
+      margin: 0 0 1rem;
+    }
+    h2 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 3rem 0 1rem;
+    }
+    p { margin: 0 0 1rem; }
+    .lede { font-size: 1.1875rem; }
+    a { color: var(--accent); text-underline-offset: 0.15em; }
+    a:hover { text-decoration-thickness: 2px; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 1.5rem; padding: 0; list-style: none; }
+    .links a { font-weight: 600; text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    .project {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.25rem 1.375rem;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .project:hover { border-color: var(--accent); }
+    .project h3 { margin: 0 0 0.25rem; font-size: 1.125rem; font-weight: 600; }
+    .project h3 span { color: var(--accent); }
+    .project p { margin: 0; color: var(--muted); }
+    .tags { margin-top: 0.75rem !important; font-size: 0.875rem; }
+    .more { margin-top: 1rem; color: var(--muted); font-size: 0.9375rem; }
+    footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
+  </style>
 </head>
-
 <body>
-    <div id="navbar-top">
-        <div class="logo">
-            <a class="navlink logofont" href=#lead>HMK</a>
+  <main>
+    <h1>Ha Min Ko</h1>
+    <p class="lede">I build personal projects, whatever I find interesting at the time.</p>
+    <p>By day I'm a senior technical consultant at Arclight Consulting.</p>
+    <ul class="links">
+      <li><a href="https://www.linkedin.com/in/haminko/">LinkedIn</a></li>
+      <li><a href="https://github.com/HaminKo">GitHub</a></li>
+    </ul>
 
-            <div id="mobile-menu-open" class="shadow-large">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <!-- End #mobile-menu-toggle -->
-            <header>
-                <div id="mobile-menu-close">
-                    <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-                </div>
-                <ul id="menu">
-                    <li>
-                        <a class="navlink" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="navlink" href="#experience">Experience</a>
-                    </li>
-                    <li>
-                        <a class="navlink" href="#education">Education</a>
-                    </li>
-                    <li>
-                        <a class="navlink" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="navlink" href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a class="navlink link-square-white" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </header>
-        </div>
-    </div>
-    <!-- End header -->
+    <h2>Projects</h2>
+    <a class="project" href="https://github.com/hamsterkoster/sc-map-library">
+      <h3>SC Map Library <span aria-hidden="true">&rarr;</span></h3>
+      <p>A Windows desktop app for browsing, previewing and translating large collections of StarCraft: Brood War maps, with accurate minimaps, readable triggers and a map workshop.</p>
+      <p class="tags">Python &middot; PySide6</p>
+    </a>
+    <p class="more">More to come. Older school projects are on <a href="https://github.com/HaminKo">GitHub</a>.</p>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1 class="typewrite" data-period="2000" data-type='[ "Hi, Im Ha Min.", "I am creative.", "I love design.", "I love to develop." ]'>
-                <span class="wrap">Ha Min Ko</span>
-            </h1>
-            <h2>Student at Babson College, software engineer, designer, creator, innovator, and scholar.</h2>
-            <a href="resume.pdf" class="btn-rounded-white">Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <!-- <div class="col-md-4">
-                    <h2 class="heading slideRight">About Me</h2>
-                </div> -->
-                <div class="col-md-offset-1 col-md-10">
-                    <div class="col-md-7">
-                        <h2 class="heading slideRight">About Me</h2>
-                        <p class="slideRight">
-                            Hello!
-                        </p>
-                        <br>
-                        <p class="slideRight">
-                            My name's Ha Min Ko, but most of my friends call me "ham".
-                            I am an aspiring software engineer and junior at Babson college. I love working with web technologies, tackling challenging problems, and business.
-                        </p>
-                        <br>
-                        <p class="slideRight">
-                            Over the past four months, I've honed my skills in order to be full-stack-engineer at a software engineering fellowship. Before that, I spent a semester abroad in Russia, China, and India learning about how different cultures create vastly different business environments.
-                        </p>
-                        <br>
-                        <p class="slideRight">
-                            I'm currently looking for opportunities to write production quality code every day in order to improve my abilities. I'm hoping to work on projects that can positively impact the lives of other people. If my work can make at least one other person happy, it was worth it.
-                        </p>
-                    </div>
-                    <div class="col-md-5">
-                        <!-- <h2 class="heading slideRight">About Me</h2> -->
-                        <div class="slideLeft profilePicture">
-                            <img alt="Photograph of Ha Min Ko" src="images/Ha_Min_Ko_Profile.jpg" />
-                        </div>
-                        <p style="display: none">Ha Min Ko</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading slideDown">Experience</h2>
-        <div id="experience-timeline" class="slideRight">
-            <div class="slideLeft2" data-date="March 2017 - Present">
-                <h3>PennVention - University of Pennsylvania</h3>
-                <h4>Contract Software Engineer</h4>
-                <p>
-                    I built PennTracker - an end to end management platform designed to expedite the administrative process of running an annual startup competition with over 1000s of yearly applicants. The backend was built on Node.js/Express, the database using PostgresSQL and Sequelize, and the frontend using standard HTML, CSS and JQuery.
-                </p>
-                <br>
-                <p>My contributions to this project include the following:</p>
-                <ul>
-                    <li>Architected and built relational database schema allowing for different types of users (students, mentors, judges), teams, multiple stages and awards, feedbacks, and rubrics</li>
-                    <li>Designed middleware routes to handle different type of users and built the RESTful API for accessing, creating, and updating all the information available in the database</li>
-                    <li>Developed admin dashboard with functionalities like stage tracking and judge/mentor approval.</li>
-                </ul>
-            </div>
-
-            <div class="slideLeft" data-date="October 2015 – May 2016">
-                <h3>Cactus Practice</h3>
-                <h4>Finance, Marketing, and Entrepreneurship</h4>
-                <p>
-                    In my first year at Babson, I was part of a 19 member student-run business as part of Babson's first year curriculum. We aimed to enhance the aesthetic of student dorm's and promote better care of plant life by selling succulents and cacti.
-                </p>
-                <br>
-                <p>
-                    Our original business plan was an earpod accessory that would enhance hearing and comfort. Unfortunately, our orders with a manufacturerer in China were delayed time and time again. Three of our members and I worked together to flesh our a new business idea and plan over a day, which we proposed and got approved.
-                </p>
-                <br>
-                <p>
-                    My roles and responsibilites and highlights:
-                </p>
-                <br>
-                <ul>
-                    <li>Conducted market research and led focus groups to determine the best business strategy for our products.</li>
-                    <li>Lead and developed the creation of our business's launch plan, including calculating start-up costs, breakeven point, and projected sales.</li>
-                    <li>Designed and created deck slides for presentations, and collaborated with other team members for delivery.</li>
-                    <li>Created financial statements, completed essential forms necessary for business, and audited financial data.</li>
-                    <li>Organized key members of the team to overhaul the business plan, pivoting to an idea that sold out all inventory in three weeks.</li>
-                </ul>
-            </div>
-
-            <div class="slideLeft" data-date="June 2013 - August 2013">
-                <h3>Constitutional Rights Foundation</h3>
-                <h4>Student Intern</h4>
-                <p>
-                    Through CRF, I was put as an intern at Sheppard Mullin LLP. I had the opportunity to learn what it's like to work in an office of a large law firm. I was mainly responsible for cataloging paper files and data input.
-                </p>
-                <br>
-                <p>
-                    Some highlights:
-                </p>
-                <br>
-                <ul>
-                    <li>Organized and executed efficient methods of data input, allowing over 200 open and closed matters to be input into Aderant system daily.</li>
-                    <li>Collaborated with another student intern to file 6 months’ worth of backlogged data in under 3 weeks.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading slideDown">Education</h2>
-        <div class="education-block slideUp">
-            <h3>Babson College</h3>
-            <span class="education-date">Sept 2014 - May 2018</span>
-            <h4>Bachelor of Science in Business Administration with Concentration in Business Analytics and Information Technologies Management</h4>
-            <ul>
-                <li>
-                    <i>
-                        Cumulative GPA: 3.93/4.00
-                    </i>
-                </li>
-                <li>
-                    Activites and Societies: Babson Toastmasters, Honors Program, Presidential Scholar, Big Brothers and Sisters of Massachusetts, Cru, Symphony Church; Past Engagements: Babson Theatre Backstage, Babson Investing
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block slideUp">
-            <h3>Horizons School of Technology</h3>
-            <span class="education-date">January 2017 - May 2017</span>
-            <h4>Fellowship in Software Engineering and Entrepreneurship</h4>
-            <ul>
-                <li>
-                    16 weeks, 6 days/week, 80-100+ hours/week software engineering course.
-                </li>
-                <li>
-                    Projects include building clones of Twitter, Kickstart, Facebook, Trello, Yelp, and Yo.
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block slideUp">
-            <h3>BRIC: The Cornerstone of the New Global Economy</h3>
-            <span class="education-date">Aug 2016 – Nov 2016</span>
-            <h4>Semester Abroad in Russia, India, and China</h4>
-            <ul>
-                <li>
-                    Adapted to unfamiliar environments and embraced cultural differences.
-                </li>
-                <li>
-                    Studied foreign business environments through intercultural lenses, developing proficiencies in understanding of
-                    macroeconomic trends, entrepreneurial opportunities, and underlying cultural beliefs
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block slideUp">
-            <h3>John Marshall High School</h3>
-            <span class="education-date">September 2010 - June 2014</span>
-            <h4>Magnet Valedictorian</h4>
-            <ul>
-                <li>
-                    <i>
-                        Cumulative GPA: 4.00/4.00 | SAT: 2250 (800M) | SAT II Math: 800
-                    </i>
-                </li>
-                <li>
-                    AP Chemistry: 5 |
-                    AP Physics C Mechanics: 5 |
-                    AP US History: 5 |
-                    AP English Language and Composition: 5 |
-                    AP English Literature: 5|
-                    AP Calculus AB: 5 |
-                    AP Calculus BC: 5 |
-                    AP Microeconomics: 5 |
-                    AP Macroeconomics: 5 |
-                    AP World History: 4 |
-                    AP Statistics: 4 |
-                    AP European History: 4 |
-                    AP Biology: 4 |
-                </li>
-                <li>
-                    Involved in <a href="http://www.dailynews.com/social-affairs/20140615/sacramento-honors-el-camino-real-john-marshall-high-for-academic-decathlon-wins">Academic Decathlon</a> (1st Place Regionals, 3rd Place State, 1st Place Online Nationals), Computer club, Chess club, Readers club.
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading slideDown">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large slideLeft">
-                    <div class="project-image">
-                        <img src="images/penntracker-project.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>PennTracker</h3>
-                        <p>
-                            End-to-end management platform for an annual startup competition at UPenn desgiend to expedite the competition process and provide a portal where all members in the competition can access relevant information. The site allows for four different kinds of users, creation of new rubrics and feedback forms, creation of new awards, and other administrative features. Students can create new teams and join pre-existing ones, judges can give feedback to each team for each stage of the competition, and all users can look up other user and team information (depending on user type).
-                        </p>
-                        <p>
-                            Built using Node.js/Express, JQuery, PostgresSQL, and Sequelize.
-                        </p>
-                        <a class="navlink" href="#contact">Private Project - Contact for Details</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large slideLeft">
-                    <div class="project-image">
-                        <img src="images/middle-race-project.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Middle Race</h3>
-                        <p>
-                            Turn-based multiplayer racing game for iOS where the goal is to finish as close to the middle as possible. Each player receives a special unique ability that impacts the game state either passively or actively.
-                        </p>
-                        <br>
-                        <p>
-                            Built using Node.js/Express, React-Native, and MongoDb.
-                        </p>
-                        <a href="https://github.com/HaminKo/middleRaceFrontEnd" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large slideLeft">
-                    <div class="project-image">
-                        <img src="images/farebuddy-project.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Farebuddy</h3>
-                        <p>
-                            Web application that allows users to find cheaper Uber rides. During surge pricing, users can expect to save around 10-20% by using this application and walking a few blocks.
-                        </p>
-                        <br>
-                        <p>
-                            Built using Node.js/Express, Uber and Google Maps API, and MongoDb.
-                        </p>
-                        <a href="http://farebuddy-public.herokuapp.com/" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large slideLeft">
-                    <div class="project-image">
-                        <img src="images/double-message-project.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Double-Message</h3>
-                        <p>
-                            Personal relationship manager web application that allowing shared inbox for texting and email. Includes a delayed message feature.
-                        </p>
-                        <br>
-                        <p>
-                            Built using Node.js/Express, Twilio and Sendgrid API, and MongoDb.
-                        </p>
-                        <a href="https://double-message-demo.herokuapp.com/">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading slideDown">Skills</h2>
-        <ul class="slideLeft">
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Node.js</li>
-            <li>React</li>
-            <li>React Native</li>
-            <li>Express</li>
-            <li>Webpack</li>
-            <li>Babel.js</li>
-            <li>Redux</li>
-            <li>Git</li>
-            <li>MongoDB</li>
-            <li>PostgresSQL</li>
-            <li>Sequelize</li>
-            <li>FlexBox</li>
-            <li>JQuery</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>SQL</li>
-            <li>Redis</li>
-            <li>R</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/hko1@babson.edu">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">SEND</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2017 Ha Min Ko
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/HaminKo" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://stackoverflow.com/story/haminko" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/haminko/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/HaminKo" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/HaMin_Ko" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/114428668399489234939" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <footer>&copy; 2026 Ha Min Ko</footer>
+  </main>
 </body>
-
 </html>
