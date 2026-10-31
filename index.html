@@ -67,13 +67,19 @@
       border: 1px solid var(--line);
       border-radius: 10px;
       padding: 1.25rem 1.375rem;
-      color: inherit;
-      text-decoration: none;
-      transition: border-color 0.15s;
     }
-    .project:hover { border-color: var(--accent); }
-    .project h3 { margin: 0 0 0.25rem; font-size: 1.125rem; font-weight: 600; }
-    .project h3 span { color: var(--accent); }
+    .projects { display: grid; gap: 0.875rem; }
+    .project h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.625rem; margin: 0 0 0.25rem; font-size: 1.125rem; font-weight: 600; }
+    .status {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 0.05rem 0.55rem;
+    }
     .project p { margin: 0; color: var(--muted); }
     .tags { margin-top: 0.75rem !important; font-size: 0.875rem; }
     .more { margin-top: 1rem; color: var(--muted); font-size: 0.9375rem; }
@@ -90,11 +96,28 @@
     </ul>
 
     <h2>Projects</h2>
-    <a class="project" href="https://github.com/hamsterkoster/sc-map-library">
-      <h3>SC Map Library <span aria-hidden="true">&rarr;</span></h3>
-      <p>A Windows desktop app for browsing, previewing and translating large collections of StarCraft: Brood War maps, with accurate minimaps, readable triggers and a map workshop.</p>
-      <p class="tags">Python &middot; PySide6</p>
-    </a>
+    <div class="projects">
+      <article class="project">
+        <h3>SC Map Library <span class="status">In progress</span></h3>
+        <p>A Windows desktop app for browsing, previewing and translating large collections of StarCraft: Brood War maps, with accurate minimaps, readable triggers and a map workshop.</p>
+        <p class="tags">Python &middot; PySide6</p>
+      </article>
+      <article class="project">
+        <h3>SC Map Unfreeze <span class="status">In progress</span></h3>
+        <p>A companion to SC Map Library that lets it make working translated copies of abandoned Korean maps protected with euddraft&rsquo;s freeze, keeping the original author&rsquo;s credit. Kept private on purpose.</p>
+        <p class="tags">Python &middot; reverse engineering</p>
+      </article>
+      <article class="project">
+        <h3>Peacefree Revival <span class="status">In progress</span></h3>
+        <p>A fan revival of Peacefree: Tactical Warfare, a Flash strategy game from Kongregate. Decompiled and patched to run smoothly offline with its premium features unlocked; quality-of-life changes and a playable release come next.</p>
+        <p class="tags">ActionScript &middot; Python &middot; Ruffle</p>
+      </article>
+      <article class="project">
+        <h3>Slide Out <span class="status">Early prototype</span></h3>
+        <p>A sliding-block puzzle for the browser in the Klotski family, with irregular boards and awkwardly shaped pieces. Later it becomes co-op: each player controls only some of the pieces.</p>
+        <p class="tags">Browser game</p>
+      </article>
+    </div>
     <p class="more">More to come. Older school projects are on <a href="https://github.com/HaminKo">GitHub</a>.</p>
 
     <footer>&copy; 2026 Ha Min Ko</footer>
