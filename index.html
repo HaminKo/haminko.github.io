@@ -96,6 +96,9 @@
       padding: 0.05rem 0.55rem;
     }
     .project p { margin: 0; color: var(--muted); }
+    a.project { color: inherit; text-decoration: none; transition: border-color 0.15s; }
+    a.project:hover, a.project:focus-visible { border-color: var(--accent); }
+    .arrow { margin-left: auto; color: var(--accent); }
     .tags { margin-top: 0.75rem !important; font-size: 0.875rem; }
     .more { margin-top: 1rem; color: var(--muted); font-size: 0.9375rem; }
     footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
@@ -122,11 +125,11 @@
         <p>A companion to SC Map Library that lets it make working translated copies of abandoned Korean maps protected with euddraft&rsquo;s freeze, keeping the original author&rsquo;s credit. Kept private on purpose.</p>
         <p class="tags">Python &middot; reverse engineering</p>
       </article>
-      <article class="project">
-        <h3>Peacefree Revival <span class="status">In progress</span></h3>
-        <p>A fan revival of Peacefree: Tactical Warfare, a Flash strategy game by Helgravis. Decompiled and patched to run smoothly offline with its premium features unlocked; quality-of-life changes and a playable release come next.</p>
-        <p class="tags">ActionScript &middot; Python &middot; Ruffle</p>
-      </article>
+      <a class="project" href="https://github.com/hamsterkoster/PeacefreeRevival">
+        <h3>Peacefree Revival <span class="status">Released 1.0</span> <span class="arrow" aria-hidden="true">&rarr;</span></h3>
+        <p>A fan patch of Peacefree: Tactical Warfare, a Flash strategy game by Helgravis. It unlocks the premium content, plays fully offline and adds quality-of-life changes, as a Windows app or a .swf.</p>
+        <p class="tags">ActionScript &middot; Python &middot; Adobe AIR</p>
+      </a>
       <article class="project">
         <h3>Slide Out <span class="status">Early prototype</span></h3>
         <p>A sliding-block puzzle for the browser in the Klotski family, with irregular boards and awkwardly shaped pieces. Later it becomes co-op: each player controls only some of the pieces.</p>
