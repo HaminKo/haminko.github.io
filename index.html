@@ -52,7 +52,7 @@
       font: 400 1.0625rem/1.6 "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
     }
     main {
-      max-width: 40rem;
+      max-width: 60rem;
       margin: 0 auto;
       padding: clamp(3rem, 10vh, 6rem) 1.25rem 3rem;
     }
@@ -83,7 +83,11 @@
       border-radius: 10px;
       padding: 1.25rem 1.375rem;
     }
+    .intro { max-width: 40rem; }
     .projects { display: grid; gap: 0.875rem; }
+    @media (min-width: 52rem) {
+      .projects { grid-template-columns: 1fr 1fr; }
+    }
     .project h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.625rem; margin: 0 0 0.25rem; font-size: 1.125rem; font-weight: 600; }
     .status {
       font-size: 0.75rem;
@@ -106,14 +110,16 @@
 </head>
 <body>
   <main>
+    <div class="intro">
     <h1>Ha Min Ko</h1>
     <p class="lede">I&rsquo;m based in Boston and build personal projects in my spare time, mostly tools, games and mods.</p>
     <ul class="links">
       <li><a href="https://www.linkedin.com/in/haminko/">LinkedIn</a></li>
       <li><a href="https://github.com/HaminKo">GitHub</a></li>
     </ul>
+    </div>
 
-    <h2>Projects</h2>
+    <h2>Peacefree</h2>
     <div class="projects">
       <a class="project" href="https://github.com/hamsterkoster/PeacefreeRevival">
         <h3>Peacefree Revival <span class="status">Released 1.0</span> <span class="arrow" aria-hidden="true">&rarr;</span></h3>
@@ -125,6 +131,10 @@
         <p>A from-scratch rewrite of Peacefree for the browser, faithful to the original first, so it runs at full speed without Flash and can be modded with new levels, enemies and buildings. It goes public once there&rsquo;s something to play.</p>
         <p class="tags">TypeScript &middot; Pixi.js &middot; Vite</p>
       </article>
+    </div>
+
+    <h2>StarCraft: Brood War</h2>
+    <div class="projects">
       <article class="project">
         <h3>SC Map Library <span class="status">In progress</span></h3>
         <p>A Windows desktop app for browsing, previewing and translating large collections of StarCraft: Brood War maps, with accurate minimaps, readable triggers and a map workshop.</p>
@@ -145,6 +155,10 @@
         <p>A script that watches StarCraft: Remastered and, each time the game closes, tells a crash or hang from a normal exit. For each crash it saves the Windows event logs, Blizzard&rsquo;s crash report and the game&rsquo;s memory use from around that moment. It only reads logs and never changes the game.</p>
         <p class="tags">PowerShell &middot; Windows</p>
       </article>
+    </div>
+
+    <h2>Other</h2>
+    <div class="projects">
       <article class="project">
         <h3>Slide Out <span class="status">Early prototype</span></h3>
         <p>A sliding-block puzzle for the browser in the Klotski family, with irregular boards and awkwardly shaped pieces. Later it becomes co-op: each player controls only some of the pieces.</p>
