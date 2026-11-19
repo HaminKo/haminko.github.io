@@ -1,0 +1,33 @@
+# Keeps the "Released X.Y" labels in index.html in step with each linked
+# repo's newest GitHub release. Commits only when a version changed.
+name: Update release versions
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: [index.html, .github/update_versions.py]
+
+permissions:
+  contents: write
+
+concurrency: versions
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update versions
+        run: python .github/update_versions.py index.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit if changed
+        run: |
+          git diff --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update release versions"
+          git push
